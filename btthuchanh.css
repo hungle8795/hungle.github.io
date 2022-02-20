@@ -1,0 +1,46 @@
+html{
+    scroll-behavior: smooth;
+}
+.justify-content-flex-end{
+    justify-content: flex-end;
+}
+.justify-content-space-between{
+    justify-content: space-between;
+}
+.height-400px{
+    height: 400px;
+}
+.width-45{
+    width: 45%;
+}
+.width-60{
+    width: 60%;
+    margin: auto;
+}
+.width-100{
+    width: 100%;
+}
+.border-bottom{
+    border-bottom: 1px solid gray;
+}
+.margin-auto{
+    margin: auto;
+}
+.float-right{
+    float: right;
+}
+.text-decor-none{
+    text-decoration: none;
+}
+.mbot-30px{
+    margin-bottom: 30px;
+}
+.ptop-100px{
+    padding-top: 100px;
+}
+.pbot-50px{
+    padding-bottom: 50px;
+}
+.letter-spacing{
+    letter-spacing: 2px;
+}

@@ -1,0 +1,118 @@
+/* html{
+    scroll-behavior: smooth;
+} */
+.align-item-center{
+    align-items: center;
+}
+.justify-content-right{
+    justify-content: right;
+}
+.border{
+    border: 1px solid black;
+}
+.transformY-20px{
+    transform: translateY(-20px);
+}
+.transformY-40px{
+    transform: translateY(-40px);
+}
+.transformY-50px{
+    transform: translateY(-50px);
+}
+.transformY-120px{
+    transform: translateY(120px);
+}
+.height{
+    height: 40px;
+}
+.height-70px{
+    height: 70px;
+}
+.height-100px{
+    height: 100px;
+}
+.height-300px{
+    height: 300px;
+}
+.width-60{
+    width: 60%;
+}
+.width-70{
+    width: 70%;
+}
+.width-80{
+    width: 80%;
+}
+.width-90{
+    width: 90%;
+}
+.width-70px{
+    width: 70px;
+}
+.width-100px{
+    width: 100px;
+}
+.font-size-50px{
+    font-size: 50px;
+}
+.margin-auto{
+    margin: auto!important;
+}
+nav{
+    position: fixed!important;
+    bottom: 10px;
+    right: 10px;
+    z-index: 10;
+}
+nav i{
+    font-size: 30px;
+}
+.border-radius-5px{
+    border-radius: 5px;
+}
+.first{
+    background-color: #6B6BEF;
+}
+.toolbar{
+    position: fixed;
+    width: 100%;
+    background-color: #5B88FB;
+    z-index: 15;
+}
+.toolbar .logovedu{
+    width: 200px;
+    height: 80px;
+}
+.first .btn-hover-bg-none:hover{
+    border-color: white;
+    color: white;
+}
+.third{
+    background-color: #F8F9FB;
+}
+.third i{
+    font-size: 50px;
+    vertical-align: middle;
+}
+.fifth{
+    background-color: #5B88FB;
+}
+.sixth i{
+    font-size: 30px;
+}
+.seventh{
+    background-color: #F3F3F3;
+}
+.seventh i{
+    color: #FFC832;
+}
+.eighth img{
+    width: 100%;
+    height: 180px;
+}
+iframe{
+    height: 200px;
+}
+input{
+    width: 100%;
+}

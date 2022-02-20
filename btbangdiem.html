@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Document</title>
+    <style>
+        .red {
+            color: red;
+        }
+
+        .green {
+            color: green;
+        }
+
+        .blue {
+            color: blue;
+        }
+
+        #hsgioi {
+            background-color: green;
+            color: white;
+        }
+
+        #hskha {
+            background-color: blue;
+            color: white;
+        }
+
+        #hstb {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row mb-4 mt-5">
+            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 d-flex justify-content-between">
+                <p>ho ten</p>
+                <input type="text" id="ten">
+            </div>
+            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 d-flex justify-content-between">
+                <p>Ho ten bat buoc nhap</p>
+            </div>
+        </div>
+        <div class="row mb-4">
+            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 d-flex justify-content-between">
+                <p>Lop</p>
+                <input type="text" id="lop">
+            </div>
+            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 d-flex justify-content-between">
+                <p>Lop hoc bat buoc nhap</p>
+            </div>
+        </div>
+        <div class="row mb-4">
+            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 d-flex justify-content-between">
+                <p>Diem toan</p>
+                <input type="text" id="toan">
+            </div>
+            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 d-flex justify-content-between">
+                <p>Diem toan phai nhap va phai la so trong khoang tu 0 - 10</p>
+            </div>
+        </div>
+        <div class="row mb-4">
+            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 d-flex justify-content-between">
+                <p>Diem Ly</p>
+                <input type="text" id="ly">
+            </div>
+            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 d-flex justify-content-between">
+                <p>Diem ly phai nhap va phai la so trong khoang tu 0 - 10</p>
+            </div>
+        </div>
+        <div class="row mb-4">
+            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 d-flex justify-content-between">
+                <p>Diem Hoa</p>
+                <input type="text" id="hoa">
+            </div>
+            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 d-flex justify-content-between">
+                <p>Diem hoa phai nhap va phai la so trong khoang tu 0 - 10</p>
+            </div>
+        </div>
+        <div class="text-center mb-5">
+            <button type="button" id="nhap">NHAP</button>
+        </div>
+        <table class="table table-bordered table-hover">
+            <tr>
+                <th>STT</th>
+                <th>Ho ten</th>
+                <th>Toan</th>
+                <th>Ly</th>
+                <th>Hoa</th>
+                <th>Trung Binh</th>
+            </tr>
+        </table>
+        <div class="text-right">
+            <button type="button" id="tinhtb" class="mb-3 mt-5 mr-4">Tinh TB</button>
+            <button type="button" id="hsgioi">hsgioi</button>
+            <button type="button" id="hskha">hskha</button>
+            <button type="button" id="hstb">hstb</button>
+        </div>
+
+
+
+        <script>
+            $(document).ready(function () {
+                $("#nhap").click(function () {
+                    var ten = $("#ten").val();
+                    var lop = $("#lop").val();
+                    var toan = $("#toan").val();
+                    var ly = $("#ly").val();
+                    var hoa = $("#hoa").val();
+
+                    if (ten == "" & lop == "" & toan == "" & ly == "" & hoa == "") {
+                        alert("hay nhap du lieu")
+                    }
+                    else {
+                        if (ten == "") {
+                            alert("hay nhap ten")
+                        }
+                        else if (isNaN(ten)) {
+                            if (lop == "") {
+                                alert("hay nhap lop")
+                            }
+                            else {
+                                if (toan == "") {
+                                    alert("hay nhap diem toan")
+                                }
+                                else if (isNaN(toan)) {
+                                    alert("diem toan la so")
+                                }
+                                else if (0 > toan || toan >= 11) {
+                                    alert("diem phai tu 0 - 10")
+                                }
+                                else {
+                                    if (ly == "") {
+                                        alert("hay nhap diem ly")
+                                    }
+                                    else if (isNaN(ly)) {
+                                        alert("diem ly la so")
+                                    }
+                                    else if (0 > ly || ly >= 11) {
+                                        alert("diem phai tu 0 - 10")
+                                    }
+                                    else {
+                                        if (hoa == "") {
+                                            alert("hay nhap diem hoa")
+                                        }
+                                        else if (isNaN(hoa)) {
+                                            alert("diem hoa la so")
+                                        }
+                                        else if (0 > hoa || hoa >= 11) {
+                                            alert("diem phai tu 0 - 10")
+                                        }
+                                        else {
+                                            $("#hoten").text(ten);
+                                            $("#lophoc").text(lop);
+                                            $("#dtoan").text(toan);
+                                            $("#dly").text(ly);
+                                            $("#dhoa").text(hoa);
+                                            var stt = $("tr").length;
+                                            $("table").append("<tr id='row" + stt + "'><td id='stt" + stt + "'>" + stt + "</td><td id='ten" + stt + "'>" + ten + "</td><td id='toan" + stt + "'>" + toan + "</td><td id='ly" + stt + "'>" + ly + "</td><td id='hoa" + stt + "'>" + hoa + "</td><td id='diemtb" + stt + "'>" + "?" + "</td></tr>");
+                                            $("input").val("");
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        else {
+                            alert("hay nhap chu")
+                        }
+                    }
+                })
+            })
+            $(document).ready(function () {
+                $("#tinhtb").click(function () {
+                    var stt = $("tr").length;
+                    for (var i = 1; i <= stt; i++) {
+                        var toan = Number($("#toan" + i).text());
+                        var ly = Number($("#ly" + i).text());
+                        var hoa = Number($("#hoa" + i).text());
+                        var dtb = (toan + ly + hoa) / 3;
+                        $("#diemtb" + i).text(dtb.toFixed(2));
+                    }
+                })
+            })
+            $(document).ready(function () {
+                $("#hsgioi").click(function () {
+                    var stt = $("tr").length;
+                    for (var i = 1; i <= stt; i++) {
+                        var dtb = Number($("#diemtb" + i).text());
+                        if (dtb >= 8) {
+                            $("#row" + i).addClass("green")
+                        }
+                    }
+                })
+            })
+            $(document).ready(function () {
+                $("#hskha").click(function () {
+                    var stt = $("tr").length;
+                    for (var i = 1; i <= stt; i++) {
+                        var dtb = Number($("#diemtb" + i).text());
+                        if (dtb < 8 && dtb >= 5) {
+                            $("#row" + i).addClass("blue")
+                        }
+                    }
+                })
+            })
+            $(document).ready(function () {
+                $("#hstb").click(function () {
+                    var stt = $("tr").length;
+                    for (var i = 1; i <= stt; i++) {
+                        var dtb = Number($("#diemtb" + i).text());
+                        if (dtb < 5) {
+                            $("#row" + i).addClass("red")
+                        }
+                    }
+                })
+            })
+        </script>
+    </div>
+</body>
+
+</html>
